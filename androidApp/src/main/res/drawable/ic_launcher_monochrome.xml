@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Globe Outer Border -->
+    <path
+        android:pathData="M 54, 27 A 27, 27 0 1, 0 54, 81 A 27, 27 0 1, 0 54, 27 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.0"
+        android:strokeAlpha="0.9" />
+
+    <!-- Equator -->
+    <path
+        android:pathData="M 27, 54 L 81, 54"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeAlpha="0.6" />
+
+    <!-- Parallels (Latitude Lines) -->
+    <path
+        android:pathData="M 31.9, 38.5 L 76.1, 38.5 M 31.9, 69.5 L 76.1, 69.5"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.4" />
+
+    <!-- Prime Meridian -->
+    <path
+        android:pathData="M 54, 27 L 54, 81"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeAlpha="0.6" />
+
+    <!-- Meridians (Longitudes) -->
+    <path
+        android:pathData="M 54, 27 A 14, 27 0 0, 0 54, 81 M 54, 27 A 14, 27 0 0, 1 54, 81"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.4" />
+
+    <!-- Radar Pulse Ring -->
+    <path
+        android:pathData="M 47, 56 A 7, 2.5 0 1, 0 61, 56 A 7, 2.5 0 1, 0 47, 56 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.6" />
+
+    <!-- Map Pin with Hollow Center (evenOdd) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M 54, 56 L 46.2, 42.5 A 9, 9 0 1, 1 61.8, 42.5 Z M 54, 34.2 A 3.8, 3.8 0 1, 0 54, 41.8 A 3.8, 3.8 0 1, 0 54, 34.2 Z" />
+
+</vector>
