@@ -1,21 +1,37 @@
 # Add project specific ProGuard rules here.
 # You can control the set of applied configuration files using the
 # proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Keep line numbers for readable stack traces in Play Console crash reports
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# kotlinx.serialization rules
+-keepattributes *Annotation*, InnerClasses, Signature
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-keepclassmembers class * {
+    *** Companion;
+}
+
+-keepclassmembers class * {
+    *** $serializer;
+}
+
+-keepclassmembers class * {
+    @kotlinx.serialization.Serializable <fields>;
+    @kotlinx.serialization.SerialName <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @kotlinx.serialization.Serializable class *;
+}
+
+-keep class *$$serializer {
+    *;
+}
+
+-dontwarn kotlinx.serialization.**
+
+# LatLong domain & data models
+-keep class no.madival.latlong.data.** { *; }
+-keepclassmembers class no.madival.latlong.data.** { *; }

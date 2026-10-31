@@ -28,3 +28,4 @@ ne_*.zip
 
 # Built APK packages
 *.apk
+*.aab
