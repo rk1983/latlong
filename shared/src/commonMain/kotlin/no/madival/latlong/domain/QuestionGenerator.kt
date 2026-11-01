@@ -52,7 +52,8 @@ class QuestionGenerator {
             .ifEmpty { validCountries }
 
         val target = candidatePool.shuffled(rng).first()
-        val coordinate = target.samplePoints.shuffled(rng).firstOrNull()
+        // Always pick the primary central representative point (first item) rather than random periphery points
+        val coordinate = target.samplePoints.firstOrNull()
             ?: SamplePoint(0f, 0f, listOf(-180f, -90f, 180f, 90f))
 
         val distractors = mutableListOf<Country>()
